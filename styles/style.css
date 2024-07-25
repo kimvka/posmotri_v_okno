@@ -71,6 +71,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -109,7 +110,7 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__label:active > .search-form__textfield{
+.search-form__label:active > .search-form__textfield {
   outline: 1px solid #fff;
   outline-offset: 0;
 }
@@ -279,17 +280,16 @@ button:focus-visible {
 .content__list {
   display: flex;
   flex-direction: column;
-  inline-size: 100%;
+  inline-size: 399px;
   block-size: 298px;
-  overflow-y: auto;
+  overflow: auto;
   color: #fff;
   position: relative;
   box-sizing: border-box;
 }
 
 .content__list::-webkit-scrollbar {
-  inline-size: 5px;
-  block-size: 0;
+  inline-size: 4px;
 }
 
 .content__list::-webkit-scrollbar-thumb {
@@ -301,10 +301,7 @@ button:focus-visible {
 .content__list-item {
   inline-size: 100%;
   block-size: 107px;
-}
-
-li:not(:first-child) {
-  margin-block-start: 30px;
+  margin-block-end: 30px;
 }
 
 .content__card-link {
@@ -346,14 +343,16 @@ li:not(:first-child) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3px 0 3px 1px;
+  padding: 3px 0 3px 3px;
   block-size: 100%;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+  block-size: 100%;
+  inline-size: 200px;
 }
 
 .content__video-card-title {
@@ -362,6 +361,10 @@ li:not(:first-child) {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  inline-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -369,6 +372,10 @@ li:not(:first-child) {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  inline-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-thumbnail {
